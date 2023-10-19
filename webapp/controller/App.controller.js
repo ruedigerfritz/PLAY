@@ -77,8 +77,8 @@ sap.ui.define([
         * Set Global Language
         */
             _setGlobalLanguage: function(){
-                var appLang,
-                i18nModel = this.getOwnerComponent().getModel(appLang);
+                var appLang;
+                
                 if (navigator.language == "es")
                     appLang = "i18n_es";
                 else if (navigator.language == "en")
@@ -86,7 +86,7 @@ sap.ui.define([
                 else
                     appLang = "i18n";
 
-              
+                let i18nModel = this.getOwnerComponent().getModel(appLang);
                 this.getOwnerComponent().setModel(i18nModel, "i18n");
             }
         });
